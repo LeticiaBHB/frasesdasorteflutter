@@ -4,7 +4,7 @@
 User
 | Image |
 |----------|
-| ![App Screenshot](screenshot/homepage.jpeg) |
+| ![App Screenshot](screenshot/homepage.jpg) |
 
 the application has the function of showing random phrases to the user, it contains 60 phrases in Portuguese, when clicked on the + a new phrase will appear
 
