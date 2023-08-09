@@ -65,16 +65,45 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Center(
+      body: Container(
+        padding: EdgeInsets.all(40),
+        margin: EdgeInsets.all(5),
+        decoration: BoxDecoration(
+          border: Border.all(width:3, color: Colors.lime)
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'Pressione o botão para gerar uma frase da sorte:', style: TextStyle(fontSize: 16),
+            Container(
+              child: Image.asset(
+                "assets/trevo.png", fit: BoxFit.scaleDown,
+              )
             ),
-            Text(
-              _Frases [_numeroAleatorio],
-              style: TextStyle(color: Colors.deepOrangeAccent, fontSize: 18, fontWeight: FontWeight.bold,
+           Container(
+              padding: EdgeInsets.all(40),
+              margin: EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                  border: Border.all(width:3, color: Colors.lime)
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                Text("S"),
+                Text("O"),
+                Text("R"),
+                Text("T"),
+                Text("E"),
+                ],
+              ),
+            ),
+            const Text(
+              'Pressione o botão para gerar uma frase da sorte:', style: TextStyle(fontSize: 16, wordSpacing: 0.5, decoration: TextDecoration.underline, decorationStyle: TextDecorationStyle.wavy) ,
+            ),
+            Padding(padding: EdgeInsets.all(10),
+              child: Text(
+                _Frases [_numeroAleatorio],
+                style: TextStyle(color: Colors.deepOrangeAccent, fontSize: 18, fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ],
@@ -88,3 +117,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
