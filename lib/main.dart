@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
-      _numeroAleatorio = new Random().nextInt(60);
+      _numeroAleatorio = new Random().nextInt(_Frases.length);
     });
   }
 
@@ -66,13 +66,15 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Container(
+        width: double.infinity,
         padding: EdgeInsets.all(40),
         margin: EdgeInsets.all(5),
         decoration: BoxDecoration(
           border: Border.all(width:3, color: Colors.lime)
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Container(
               child: Image.asset(
@@ -96,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
-            const Text(
+           const Text(
               'Pressione o botão para gerar uma frase da sorte:', style: TextStyle(fontSize: 16, wordSpacing: 0.5, decoration: TextDecoration.underline, decorationStyle: TextDecorationStyle.wavy) ,
             ),
             Padding(padding: EdgeInsets.all(10),
@@ -117,4 +119,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
